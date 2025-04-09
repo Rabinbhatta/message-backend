@@ -6,12 +6,12 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://messaging-frontend-nine.vercel.app/",
+    origin: "http://localhost:3000",
     credentials: true,
   },
 });
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 
 io.on("connection", (socket) => {
   console.log("A user connected");
